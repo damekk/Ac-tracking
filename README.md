@@ -1,7 +1,7 @@
-# Ac-tracking
-Track airctrafts by using ADSB antenna and Piaware software
-
 # ADS-B Aircraft Tracking with PiAware on Debian Linux
+
+## Introduction
+Track aircraft using an ADS-B antenna and PiAware software on a Raspberry Pi running Debian Linux.
 
 ## Equipment and Software Needed
 
@@ -20,38 +20,43 @@ Track airctrafts by using ADSB antenna and Piaware software
 - Insert the MicroSD card into the Raspberry Pi, connect to monitor, keyboard, mouse, and power it up.
 
 ### 2. Install Dependencies
-```shell
-sudo apt-get update
-sudo apt-get upgrade
+    ```shell
+    sudo apt-get update
+    sudo apt-get upgrade
+    ```
 
 ### 3. Install PiAware
-Download and install PiAware:
-```shell
-wget https://flightaware.com/adsb/piaware/files/packages/piaware-repository_7.0_all.deb
-sudo dpkg -i piaware-repository_7.0_all.deb
-sudo apt-get update
-sudo apt-get install piaware
+- Download and install PiAware:
+    ```shell
+    wget https://flightaware.com/adsb/piaware/files/packages/piaware-repository_7.0_all.deb
+    sudo dpkg -i piaware-repository_7.0_all.deb
+    sudo apt-get update
+    sudo apt-get install piaware
+    ```
 
 ### 4. Install Dump1090
-Install Dump1090 for ADS-B data decoding:
-```shell
-sudo apt-get install dump1090-fa
+- Install Dump1090 for ADS-B data decoding:
+    ```shell
+    sudo apt-get install dump1090-fa
+    ```
 
 ### 5. Configure Your Antenna and Receiver
-Connect the ADS-B antenna to the USB dongle and plug it into the Raspberry Pi.
-PiAware will automatically detect the dongle and start receiving data.
+- Connect the ADS-B antenna to the USB dongle and plug it into the Raspberry Pi.
+- PiAware will automatically detect the dongle and start receiving data.
 
 ### 6. Verify the Installation
-Check PiAware status:
-```shell
-sudo systemctl status piaware
+- Check PiAware status:
+    ```shell
+    sudo systemctl status piaware
+    ```
 
 ### 7. Register Your Device with FlightAware (Optional)
-Claim your PiAware device on FlightAware to contribute data and track flights online.
+- Claim your PiAware device on FlightAware to contribute data and track flights online.
 
+## Post-Setup
 
-### Post-Setup
-Optimize Antenna Placement: Ensure the antenna has a clear view of the sky.
-Secure Your Raspberry Pi: Change the default password and apply security measures.
-Regular Updates: Keep the system and PiAware updated.
+- **Optimize Antenna Placement:** Ensure the antenna has a clear view of the sky.
+- **Secure Your Raspberry Pi:** Change the default password and apply security measures.
+- **Regular Updates:** Keep the system and PiAware updated.
+
 With this setup, you can track aircraft in real-time using your Raspberry Pi and PiAware software, with the option to view data locally or on FlightAware's platform.
