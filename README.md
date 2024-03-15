@@ -20,10 +20,10 @@ Track aircraft using an ADS-B antenna and PiAware software on a Raspberry Pi run
 - Insert the MicroSD card into the Raspberry Pi, connect to monitor, keyboard, mouse, and power it up.
 
 ### 2. Install Dependencies
-    ```shell
-    sudo apt-get update
-    sudo apt-get upgrade
-    ```
+- Update the package lists and upgrade the packages by running the following commands in the shell:
+  ```shell
+  sudo apt-get update
+  sudo apt-get upgrade
 
 ### 3. Install PiAware
 - Download and install PiAware:
